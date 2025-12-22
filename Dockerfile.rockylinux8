@@ -1,0 +1,5 @@
+
+FROM dalibo/buildpack-rust:rockylinux8
+
+RUN cargo pgrx init
+

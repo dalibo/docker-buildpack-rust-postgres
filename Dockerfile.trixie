@@ -1,0 +1,5 @@
+
+FROM dalibo/buildpack-rust:trixie
+
+RUN cargo pgrx init
+
