@@ -1,5 +1,14 @@
 
 FROM dalibo/buildpack-rust:rockylinux8
 
+RUN useradd --create-home --shell /bin/bash postgres
+
+USER postgres
+
+# Set environment variables for Rust
+ENV CARGO_HOME=~postgres/.cargo
+ENV RUSTUP_HOME=/usr/local/rustup
+ENV PATH=/usr/local/cargo/bin:$PATH
+
 RUN cargo pgrx init
 
