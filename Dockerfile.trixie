@@ -1,5 +1,5 @@
 
-FROM dalibo/buildpack-rust:trixie
+FROM ghcr.io/dalibo/buildpack-rust:trixie
 
 RUN cargo pgrx init
 

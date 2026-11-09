@@ -1,5 +1,5 @@
 
-FROM dalibo/buildpack-rust:rockylinux8
+FROM ghcr.io/dalibo/buildpack-rust:rockylinux8
 
 RUN useradd --create-home --shell /bin/bash postgres
 
