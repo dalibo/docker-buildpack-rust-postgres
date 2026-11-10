@@ -1,5 +1,8 @@
 
 FROM ghcr.io/dalibo/buildpack-rust:trixie
 
-RUN cargo pgrx init
+RUN apt-get update \
+    && apt-get install --no-install-recommends --yes libicu-dev \
+    && rm -rf /var/lib/apt/lists/*
 
+RUN cargo pgrx init
